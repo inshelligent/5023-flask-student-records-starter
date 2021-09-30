@@ -19,12 +19,11 @@
         <tr>
             <td>{{ student.name }}</td>
             <td>{{ student.grade.name }}</td>
-            <td>
+            <td>{{ student.house.colour }}</td>
                 <!-- TODO: Add student's house's colour -->
-            </td>
             <td>{{ student.english_mark }}</td>
             <td>{{ student.science_mark }}</td> 
-            <td>
+            <td>{{ student.mathematics_mark }}
                 <!-- TODO: Add student's mathematics mark in the table -->
             </td>
             <td>
@@ -36,6 +35,11 @@
             </td>
             <td>
                 <!-- TODO: Add student's stays_on_task behaviour in the table -->
+                {% if student.stays_on_task %}
+                Yes
+                {% else %}
+                No
+                {% endif %}
             </td>
         </tr>
         {% endfor %}
